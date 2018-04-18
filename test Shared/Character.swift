@@ -10,10 +10,10 @@ import SpriteKit
 import GameplayKit
 
 class Character: GKEntity {
-    init(imageName: String) {
+    override init() {
         super.init()
         
-        let spriteComponent = SpriteComponent(texture: SKTexture(imageNamed: imageName))
+        let spriteComponent = SpriteComponent()
         addComponent(spriteComponent)
     }
     
@@ -26,8 +26,8 @@ class SpriteComponent: GKComponent {
     
     let spriteNode: SKSpriteNode
     
-    init(texture: SKTexture) {
-        spriteNode = SKSpriteNode(texture: texture, color: .clear, size: texture.size())
+    override init() {
+        spriteNode = SKSpriteNode(color: SKColor.red, size: CGSize(width: 100, height: 100))
         super.init()
     }
     
