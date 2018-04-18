@@ -38,14 +38,14 @@ class GameViewController: ViewController, SKViewDelegate {
         super.viewDidLoad()
         let scene = GameScene.newGameScene()
         let skView = view as! SKView
-        skView.presentScene(scene)
+        gameView.delegate = self
         scene.setUpScene()
+        skView.presentScene(scene)
 
         skView.ignoresSiblingOrder = true
         
         skView.showsFPS = true
         skView.showsNodeCount = true
-        gameView.delegate = self
         self.setupGameControllers()
     }
 }

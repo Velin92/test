@@ -15,6 +15,10 @@ class Character: GKEntity {
         
         let spriteComponent = SpriteComponent()
         addComponent(spriteComponent)
+        let movementComponent = MovementComponent()
+        addComponent(movementComponent)
+        movementComponent.node = spriteComponent.spriteNode
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

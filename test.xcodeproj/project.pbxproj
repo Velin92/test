@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7613849208746E500FAD451 /* MovementComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7613848208746E500FAD451 /* MovementComponent.swift */; };
+		A761384A208746E500FAD451 /* MovementComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7613848208746E500FAD451 /* MovementComponent.swift */; };
 		C27962352086ADF0003508C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C27962372086ADF0003508C1 /* Main.storyboard */; };
 		C2D4207820868D8800515220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4207720868D8800515220 /* AppDelegate.swift */; };
 		C2D4208620868D8800515220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4208520868D8800515220 /* AppDelegate.swift */; };
@@ -30,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7613848208746E500FAD451 /* MovementComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementComponent.swift; sourceTree = "<group>"; };
 		C27962362086ADF0003508C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2D4206D20868D8600515220 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		C2D4206E20868D8600515220 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 				C2D420A3208692A100515220 /* GameView.swift */,
 				C2D420A62086944400515220 /* Character.swift */,
 				C2D420A92086964000515220 /* EntityManager.swift */,
+				A7613848208746E500FAD451 /* MovementComponent.swift */,
 			);
 			path = "test Shared";
 			sourceTree = "<group>";
@@ -222,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7613849208746E500FAD451 /* MovementComponent.swift in Sources */,
 				C2D4209120868D8800515220 /* GameScene.swift in Sources */,
 				C2D420AA2086964000515220 /* EntityManager.swift in Sources */,
 				C2D4209E20868EB900515220 /* GameViewController.swift in Sources */,
@@ -236,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A761384A208746E500FAD451 /* MovementComponent.swift in Sources */,
 				C2D4209220868D8800515220 /* GameScene.swift in Sources */,
 				C2D420AB2086964000515220 /* EntityManager.swift in Sources */,
 				C2D4209F20868EB900515220 /* GameViewController.swift in Sources */,

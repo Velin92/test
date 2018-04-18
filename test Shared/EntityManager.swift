@@ -36,4 +36,10 @@ class EntityManager {
         entities.remove(entity)
         toRemove.insert(entity)
     }
+    
+    func updateEntities(deltaTime: TimeInterval){
+        for entity in entities {
+            entity.update(deltaTime: deltaTime)
+        }
+    }
 }

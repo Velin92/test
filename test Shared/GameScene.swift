@@ -10,7 +10,10 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    var character: Character!
+    var gvController: GameViewController!
     var entityManager: EntityManager!
+    var lastTime: TimeInterval = 0
     
     class func newGameScene() -> GameScene {
         // Load 'GameScene.sks' as an SKScene.
@@ -26,8 +29,14 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        if let skView = view as? GameView {
+            gvController = skView.delegate as! GameViewController
+        }
         entityManager = EntityManager(scene: self)
-        entityManager.add(Character())
+        character = Character()
+        entityManager.add(character)
+        
+        
     }
     
     func setUpScene() {
@@ -36,7 +45,15 @@ class GameScene: SKScene {
     
 
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        if lastTime == 0 {
+            lastTime = currentTime
+        }
+        let deltaTime = currentTime - lastTime
+        if let movementComponent = character.component(ofType: MovementComponent.self) {
+            movementComponent.direction = gvController.controllerStoredDirection
+        }
+        entityManager.updateEntities(deltaTime: deltaTime)
+        lastTime = currentTime
     }
 }
 
