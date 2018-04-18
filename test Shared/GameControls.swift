@@ -56,7 +56,6 @@ extension GameViewController {
                 controllerStoredDirection = clamp(controllerStoredDirection + float2(dpad.xAxis.value, -dpad.yAxis.value) * GameViewController.controllerAcceleration, min: -GameViewController.controllerDirectionLimit, max: GameViewController.controllerDirectionLimit)
             }
         }
-        
         return controllerStoredDirection
     }
     
