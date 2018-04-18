@@ -23,7 +23,6 @@ class MovementComponent: GKComponent {
         let module = sqrt(dx*dx + dy*dy) == 0 ? 1.0 : sqrt(dx*dx + dy*dy)
         node.position.x += CGFloat(dx)/CGFloat(module)
         node.position.y += CGFloat(dy)/CGFloat(module)
-        print(node.position.x, node.position.y, "dx:", CGFloat(dx)/CGFloat(module), "dy:", CGFloat(dy)/CGFloat(module))
     }
     
     func addNode(node: SKNode) {
