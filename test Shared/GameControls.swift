@@ -27,8 +27,8 @@ private enum KeyboardDirection : UInt16 {
     
     var vector : float2 {
         switch self {
-        case .up:    return float2( 0, -1)
-        case .down:  return float2( 0,  1)
+        case .up:    return float2( 0, 1)
+        case .down:  return float2( 0,  -1)
         case .left:  return float2(-1,  0)
         case .right: return float2( 1,  0)
         }
